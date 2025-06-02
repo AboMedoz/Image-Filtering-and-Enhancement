@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Image Filter Upload</title>
+</head>
+<body>
+    <h2>Upload an Image</h2>
+    <form action="/upload/" enctype="multipart/form-data" method="post">
+        <input name="file" type="file" accept="image/*">
+        <input type="submit" value="Upload">
+    </form>
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
